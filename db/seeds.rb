@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Category.destroy_all
+  categories = ["新聞快訓","專題報導","專欄評論","焦點人物","當代藝廊","國際影展","一週狂熱"]
+
+  categories.each do |n|
+    Category.create(:name=>n)
+    puts"category： #{n} created"
+  end
